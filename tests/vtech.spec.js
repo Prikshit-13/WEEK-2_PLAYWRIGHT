@@ -30,6 +30,7 @@ test('vtechtest', async ({ page }) => {
     await page.locator('//input[@id="vfb-14"]').fill('prikshitsingh123@gmail.com');
     await expect(page.locator('//input[@id="vfb-14"]')).toHaveValue('prikshitsingh123@gmail.com');
     await page.locator('//input[@id="vfb-18"]').fill('04/16/2026');
+    await page.keyboard.press('Enter');
 
    await page.locator('(//span[@class="select2-selection select2-selection--single"])[2]').click();
     await page.locator('//input[@class="select2-search__field"]').fill('10');

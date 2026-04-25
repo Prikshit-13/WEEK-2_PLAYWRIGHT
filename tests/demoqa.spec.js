@@ -26,7 +26,7 @@ test('DemoQA test', async ({ page }) => {
     // await expect(page.locator('//input[@id="subjectsInput"]')).toContainValue('Maths physics chemistry');
 
     await page.locator('//input[@id="hobbies-checkbox-3"]').click();
-    await page.locator('//input[@id="uploadPicture"]').click();
+    await page.locator('//input[@id="uploadPicture"]').setInputFiles("C:\\Users\\Asus\\Desktop\\New folder (2)\\WhatsApp Image 2026-04-22 at 4.51.03 PM.jpeg");
 
     await page.locator('//textarea[@id="currentAddress"]').fill('Pathankot, Punjab 145001');
      await expect(page.locator('//textarea[@id="currentAddress"]')).toHaveValue('Pathankot, Punjab 145001');
@@ -41,5 +41,4 @@ test('DemoQA test', async ({ page }) => {
 
     await expect(page.locator('//button[@id="submit"]')).toBeVisible();
     await page.locator('//button[@id="submit"]').click();
-
 });
